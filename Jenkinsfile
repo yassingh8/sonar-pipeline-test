@@ -29,7 +29,7 @@ pipeline {
 	}
 	 stage('Images'){
        steps{
-           bat "docker build -t sahvora/app1 ."
+           bat "docker build -t ayushmalviya27/app1 ."
        }
    }
 
@@ -37,7 +37,7 @@ pipeline {
 
     stage('Image push'){
        steps{
-           bat "docker push sahvora/app1"
+           bat "docker push ayushmalviya27/app1"
        }
    }
 
@@ -45,7 +45,7 @@ pipeline {
 
     stage('Image pull'){
        steps{
-           bat "docker pull sahvora/app1"
+           bat "docker pull ayushmalviya27/app1"
        }
    }    
     
