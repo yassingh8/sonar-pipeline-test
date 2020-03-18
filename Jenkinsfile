@@ -3,8 +3,8 @@ pipeline {
   stages {
 	stage('Unit Test') {
 	   steps {
-	       sh(label: 'Test running', script: '''mvn test'''
-	       echo 'Hello Testing done')
+	       sh(label: 'Test running', script: '''mvn test''')
+	       echo ('Hello Testing done')
        }
    	}
 	stage('Jacoco Coverage Report') {
