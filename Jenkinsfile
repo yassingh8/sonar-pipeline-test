@@ -45,9 +45,9 @@ pipeline {
  
     stage('Upload to S3'){
         steps{
-            withAWS(region:'us-east-1',credentials:'72e80d4b-37f0-4907-8f7e-93550a51be74')
+            withAWS(region:'us-east-1',credentials:'aws-cred')
             {
-                s3Upload(bucket:'pod4',file:'my_hello_app.tar',workingDir:'./');
+                s3Upload(bucket:'bucketforsprint',file:'my_hello_app.tar',workingDir:'./');
             }
         }
     }
